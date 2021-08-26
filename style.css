@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9faff;
+  font-family: 'Gilda Display', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.heading {
+  margin: 30px 0 15px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #0e1951;
+}
+
+p {
+  text-align: center;
+  color: #63788d;
+  margin: 20px 0 0 0;
+}
+.box {
+  background-color: #fff;
+  position: relative;
+  color: #0e1951;
+  padding: 20px;
+  width: 600px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 5%), 0 0 1px rgb(0 0 0 / 20%);
+  transform: translateX(400%);
+  transition: transform 0.7s ease;
+  overflow: hidden;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+  /* transition: tranform 0.4s ease; */
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+svg {
+  position: absolute;
+  width: 15%;
+  z-index: -1;
+  opacity: 0.05;
+  left: -10px;
+  top: 0px;
+  pointer-events: none;
+}
